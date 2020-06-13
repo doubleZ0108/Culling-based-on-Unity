@@ -48,9 +48,10 @@ public class CalculateVertsAndTris : MonoBehaviour
         GUILayout.BeginVertical();
 
 		GUI.skin.label.fontSize = 40;
-        GUILayout.Label("tris:" + tris);
-        GUILayout.Label("verts: " + verts);
-        GUILayout.Label("FPS: " + Mathf.RoundToInt(1.0f / Time.deltaTime).ToString());
+		//GUILayout.Label("tris:" + tris);
+		//GUILayout.Label("verts: " + verts);
+		GUILayout.Label("FPS: " + Mathf.RoundToInt(1.0f / Time.deltaTime).ToString());
+        
 
 		GUILayout.EndVertical();
 
@@ -60,11 +61,10 @@ public class CalculateVertsAndTris : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Time.realtimeSinceStartup > f_LastInterval + f_UpdateInterval)
         {
             f_LastInterval = Time.realtimeSinceStartup;
-            GetAllObjects();
+            //GetAllObjects();
         }
     }
 }
